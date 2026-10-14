@@ -1,0 +1,12 @@
+{
+  "name": "machine-blip",
+  "description": "Droid-style completion sounds for Claude Code",
+  "owner": { "name": "Willys Varela", "url": "https://github.com/willysvarela" },
+  "plugins": [
+    {
+      "name": "machine-blip",
+      "source": "./",
+      "description": "Plays a random droid-style chatter whenever Claude finishes a turn."
+    }
+  ]
+}
