@@ -2,7 +2,7 @@
 
 Usage: make_blip.py [out.wav] [--seed N]   (no seed = new phrase every run)
 """
-import math, random, struct, wave, sys, os
+import math, random, struct, wave, sys, os, tempfile
 
 RATE = 44100
 args = sys.argv[1:]
@@ -11,7 +11,7 @@ if "--seed" in args:
     i = args.index("--seed")
     seed = int(args[i + 1])
     del args[i : i + 2]
-out = args[0] if args else os.path.join(os.path.dirname(__file__), "blip.wav")
+out = args[0] if args else os.path.join(tempfile.gettempdir(), "machine-blip.wav")
 rng = random.Random(seed)
 
 def whistle(f0, f1, dur, trill=0.0, trill_hz=0.0, vibrato=0.0, via=None, via_at=0.3):

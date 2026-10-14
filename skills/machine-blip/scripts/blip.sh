@@ -1,6 +1,6 @@
 #!/bin/bash
 # Play a freshly generated droid chatter without blocking the caller.
-# Falls back to the bundled blip.wav if generation fails. Always exits 0 so it is safe in hooks.
+# Falls back to a system sound if generation fails. Always exits 0 so it is safe in hooks.
 dir="$(cd "$(dirname "$0")" && pwd)"
 
 play() {
@@ -18,7 +18,9 @@ tmp="$base.wav"
   if [ -n "$py" ] && "$py" "$dir/make_blip.py" "$tmp" 2>/dev/null; then
     play "$tmp"
   else
-    play "$dir/blip.wav"
+    for f in /System/Library/Sounds/Pop.aiff /usr/share/sounds/freedesktop/stereo/complete.oga; do
+      [ -f "$f" ] && { play "$f"; break; }
+    done
   fi
   rm -f "$tmp"
 ) </dev/null >/dev/null 2>&1 &

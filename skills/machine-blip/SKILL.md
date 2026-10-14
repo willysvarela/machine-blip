@@ -22,8 +22,7 @@ Run it from this skill's directory. It is non-blocking and exits 0 even if audio
 `scripts/make_blip.py [out.wav] [--seed N]` is a stdlib-only synthesizer. The syllable functions
 (`chirp`, `dee`, `trill`, `wobble`, `wheep`, `dwoo`, `fiu_fiu`) and the weights in the phrase
 builder at the bottom shape the voice. `--seed` reproduces a phrase. After editing, play it to
-let the user hear the result. `scripts/blip.wav` is the fallback used when Python is missing;
-regenerate it with `python3 scripts/make_blip.py scripts/blip.wav --seed 2187`.
+let the user hear the result. Without Python, `blip.sh` falls back to a system sound.
 
 ## Requirements
 
