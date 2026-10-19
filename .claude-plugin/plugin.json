@@ -1,11 +1,11 @@
 {
   "name": "machine-blip",
   "displayName": "Machine Blip",
-  "version": "1.0.1",
-  "description": "Plays a short, randomly generated droid-style chatter (chirps, trills, a \"fiu fiu\") whenever Claude finishes a turn, so you can hear when it's done.",
+  "version": "1.1.0",
+  "description": "Plays a short, randomly generated sound whenever Claude finishes a turn, so you can hear when it's done: a droid-style chatter (chirps, trills, a \"fiu fiu\") or a smooth kalimba motif made with earshot.",
   "author": { "name": "Willys Varela", "url": "https://github.com/willysvarela" },
   "homepage": "https://github.com/willysvarela/machine-blip",
   "repository": "https://github.com/willysvarela/machine-blip",
   "license": "MIT",
-  "keywords": ["sound", "notification", "hooks", "fun", "droid"]
+  "keywords": ["sound", "notification", "hooks", "fun", "droid", "kalimba"]
 }

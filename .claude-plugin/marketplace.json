@@ -6,7 +6,7 @@
     {
       "name": "machine-blip",
       "source": "./",
-      "description": "Plays a random droid-style chatter whenever Claude finishes a turn."
+      "description": "Plays a random droid-style chatter or smooth kalimba motif whenever Claude finishes a turn."
     }
   ]
 }
